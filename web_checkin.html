@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="./icon.ico">
+    <title>Flag提交平台</title>
+    <link rel="stylesheet" href="./assets/bootstrap.min.css">
+    <script src="./assets/jquery.min.js"></script>
+    <script src="./assets/bootstrap.bundle.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      function subflag(){
+        let username = $('#username').val();
+        let password = $('#password').val();
+        let flag = $('#flag').val();
+        $('#btn').attr('disabled', 'disabled');
+        let url = './subflag.php?username=' + username + '&password=' + password + '&flag=' + flag;
+        $.getJSON(url, function(data){
+          if (data.code == 200){
+            status(data.msg);
+            // 清空flag
+            $('#flag').val('');
+            setTimeout(function(){
+              status('就绪');
+              $('#btn').removeAttr('disabled');
+            }, 3000);
+          }else{
+            status(data.msg);
+            setTimeout(function(){
+              status('就绪');
+              $('#btn').removeAttr('disabled');
+            }, 3000);
+          }
+        });
+      }
+      function status(text) {
+        console.log(text);
+        $('#status').text(text);
+      }
+      function time(text) {
+        $('#time').text(text);
+      }
+    </script>
+  </head>
+  <body>
+    <!-- 幕布 -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-4">Flag提交</h1>
+        <p class="lead">Flag限制1分钟提交间隔，请选手确认Flag无误后提交。</p>
+        <hr class="my-4">
+        <p class="lead">
+          <a class="btn btn-primary" href="./index.php" target="_self" role="button">首页</a>
+        </p>
+      </div>
+    </div>
+    <div class="container">
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">用户名</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Username"  id="username">
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">密码</span>
+        </div>
+        <input type="password" class="form-control" placeholder="Password" id="password">
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">Flag</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Flag" id="flag">
+      </div>
+
+      <p class="clearfix">
+        <span class="text-danger float-left" id="status">就绪</span>
+        <button class="btn btn-success float-right" id="btn" name="button" onclick="javascript:subflag();">提交Flag</button>
+      </p>
+
+      <hr />
+
+    </div>
+  </body>
+</html>

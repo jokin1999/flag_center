@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="./icon.ico">
+    <title>Flag提交平台</title>
+    <link rel="stylesheet" href="./assets/bootstrap.min.css">
+    <script src="./assets/jquery.min.js"></script>
+    <script src="./assets/bootstrap.bundle.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <!-- 注册用户 -->
+    <div class="container">
+
+      <h1>注册用户</h1>
+
+      <form class="" action="./register.php" method="post">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">用户名</span>
+          </div>
+          <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="username">
+        </div>
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">密码</span>
+          </div>
+          <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" name="password">
+        </div>
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">确认密码</span>
+          </div>
+          <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" name="comfirm">
+        </div>
+
+        <p>
+          <input class="btn btn-primary float-right" type="submit" value="提交">
+        </p>
+      </form>
+
+    </div>
+  </body>
+</html>
