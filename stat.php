@@ -33,13 +33,13 @@ $count = 1;
     </script>
     <style media="screen">
       .font-board-1 {
-        font-size: 30px;
+        font-size: 60px;
       }
       .font-board-2 {
-        font-size: 30px;
+        font-size: 40px;
       }
       .font-board-3 {
-        font-size: 30px;
+        font-size: 35px;
       }
       .font-board-4 {
         font-size: 30px;
@@ -48,17 +48,6 @@ $count = 1;
   </head>
   <body>
     <!-- 幕布 -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1 class="display-4">Flag Center</h1>
-        <hr class="my-4">
-        <p class="lead">
-          <a class="btn btn-success" href="./register.html" target="_blank" role="button">注册账户</a>
-          <a class="btn btn-primary" href="./web_checkin.html" target="_self" role="button">提交Flag</a>
-          <a class="btn btn-secondary" href="./stat.php" target="_self" role="button">大屏</a>
-        </p>
-      </div>
-    </div>
     <div class="container">
 
       <h1 class="my-4">夺旗排行榜</h1>
@@ -66,9 +55,9 @@ $count = 1;
       <table class="table table-striped table-hover">
         <thead>
           <tr>
-            <th scope="col">排名</th>
-            <th scope="col">用户名</th>
-            <th scope="col">得分</th>
+            <th scope="col" style="font-size: 30px;">排名</th>
+            <th scope="col" style="font-size: 30px;">用户名</th>
+            <th scope="col" style="font-size: 30px;">得分</th>
           </tr>
         </thead>
         <tbody>
