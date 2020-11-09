@@ -161,9 +161,9 @@ class control {
     self::$database->orderBy('sub_at', 'Desc');
     $db = self::$database->getOne('submissions');
     // 控制提交间隔（1分钟）
-    if ($db && time() - strtotime($db['sub_at']) < 60){
-      return 101;
-    }
+    // if ($db && time() - strtotime($db['sub_at']) < 60){
+    //   return 101;
+    // }
     // 是否重复提交正确flag
     $this->dbAccess();
     self::$database->where('uid', $uid);

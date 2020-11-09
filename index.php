@@ -76,33 +76,33 @@ $count = 1;
               <tr>
                 <th scope="row">
                   <?php if ($count === 1): ?>
-                    <?php echo "<font color=\"#ff8a00\" font-weight=\"5px\" class=\"font-board-1\">".'#' . $count."</font>"; ?>
+                    <?php echo "<font color=\"#ff3636\" font-weight=\"5px\" class=\"font-board-1\">".'#' . $count."</font>"; ?>
                   <?php elseif($count === 2): ?>
-                    <?php echo "<font color=\"#4176ff\" class=\"font-board-2\">".'#' . $count."</font>"; ?>
+                    <?php echo "<font color=\"#ff8a00\" class=\"font-board-2\">".'#' . $count."</font>"; ?>
                   <?php elseif($count === 3): ?>
-                    <?php echo "<font color=\"#ff397b\" class=\"font-board-3\">".'#' . $count."</font>"; ?>
+                    <?php echo "<font color=\"#4176ff\" class=\"font-board-3\">".'#' . $count."</font>"; ?>
                   <?php else: ?>
                     <?php echo "<font class=\"font-board-4\">".'#' . $count."</font>"; ?>
                   <?php endif; ?>
                 </th>
                 <th scope="row">
                   <?php if ($count === 1): ?>
-                    <?php echo "<font color=\"#ff8a00\" font-weight=\"5px\" class=\"font-board-1\">".$value['username']."</font>"; ?>
+                    <?php echo "<font color=\"#ff3636\" font-weight=\"5px\" class=\"font-board-1\">".$value['username']."</font>"; ?>
                   <?php elseif($count === 2): ?>
-                    <?php echo "<font color=\"#4176ff\" class=\"font-board-2\">".$value['username']."</font>"; ?>
+                    <?php echo "<font color=\"#ff8a00\" class=\"font-board-2\">".$value['username']."</font>"; ?>
                   <?php elseif($count === 3): ?>
-                    <?php echo "<font color=\"#ff397b\" class=\"font-board-3\">".$value['username']."</font>"; ?>
+                    <?php echo "<font color=\"#4176ff\" class=\"font-board-3\">".$value['username']."</font>"; ?>
                   <?php else: ?>
                     <?php echo "<font class=\"font-board-4\">".$value['username']."</font>"; ?>
                   <?php endif; ?>
                 </th>
                 <th scope="row">
                   <?php if ($count === 1): ?>
-                    <?php echo "<font color=\"#ff8a00\" font-weight=\"5px\" class=\"font-board-1\">".$value['count']."</font>"; ?>
+                    <?php echo "<font color=\"#ff3636\" font-weight=\"5px\" class=\"font-board-1\">".$value['count']."</font>"; ?>
                   <?php elseif($count === 2): ?>
-                    <?php echo "<font color=\"#4176ff\" class=\"font-board-2\">".$value['count']."</font>"; ?>
+                    <?php echo "<font color=\"#ff8a00\" class=\"font-board-2\">".$value['count']."</font>"; ?>
                   <?php elseif($count === 3): ?>
-                    <?php echo "<font color=\"#ff397b\" class=\"font-board-3\">".$value['count']."</font>"; ?>
+                    <?php echo "<font color=\"#4176ff\" class=\"font-board-3\">".$value['count']."</font>"; ?>
                   <?php else: ?>
                     <?php echo "<font class=\"font-board-4\">".$value['count']."</font>"; ?>
                   <?php endif; ?>
