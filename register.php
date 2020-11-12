@@ -34,7 +34,8 @@ if ($password !== $comfirm){
 $control = new control();
 $result = $control->registerAccount($username, $password);
 if ($result){
-  die("注册成功！");
+  // header("location:./index.php");
+  echo "<script type='text/javascript'>alert('注册成功！点击确定3秒后自动跳转');setTimeout('location.href=\"./index.php\"', 3000);</script>";
 }else{
   die("用户名可能已经存在！");
 }

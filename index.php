@@ -53,7 +53,7 @@ $count = 1;
         <h1 class="display-4">Flag Center</h1>
         <hr class="my-4">
         <p class="lead">
-          <a class="btn btn-success" href="./register.html" target="_blank" role="button">注册账户</a>
+          <a class="btn btn-success" href="./register.html" target="_self" role="button">注册账户</a>
           <a class="btn btn-primary" href="./web_checkin.html" target="_self" role="button">提交Flag</a>
           <a class="btn btn-secondary" href="./stat.php" target="_self" role="button">大屏</a>
         </p>
